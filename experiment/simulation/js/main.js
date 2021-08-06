@@ -1,3 +1,5 @@
+"use strict";
+
 import data from "./data.js";
 
 const truncateFloat = (num) => Math.round(num * 1000000) / 1000000;
@@ -5,11 +7,11 @@ const truncateFloat = (num) => Math.round(num * 1000000) / 1000000;
 const generateXYZData = () => {
   const frames = 30;
   Object.keys(data).forEach((state) => {
-    let XYZData = {};
-    let datas = data[state];
+    const XYZData = {};
+    const datas = data[state];
     datas.frequencies.forEach((item, ind) => {
-      let geometry = [];
-      let prep = {};
+      const geometry = [];
+      const prep = {};
       item.displacement.forEach((disp) => {
         prep[disp.atom - 1] = {
           x: {
@@ -57,7 +59,7 @@ let frequency = Object.keys(data[state]["frequencies"])[0];
 let myChart = null;
 
 const initChart = () => {
-  let xyValues = Object.keys(data).map((key) => ({
+  const xyValues = Object.keys(data).map((key) => ({
     x: key,
     y: data[key]["energy"],
   }));
@@ -110,8 +112,8 @@ const initChart = () => {
         );
         if (points.length) {
           const firstPoint = points[0];
-          let tmpState = myChart.data.labels[firstPoint._index];
-          if (tmpState != state) {
+          const tmpState = myChart.data.labels[firstPoint._index];
+          if (tmpState !== state) {
             state = tmpState;
             frequency = Object.keys(data[state]["frequencies"])[0];
             triggerUpdate();
@@ -127,7 +129,7 @@ const highlightChart = () => {
     myChart.data.datasets[0].pointBackgroundColor = [];
     myChart.data.datasets[0].pointRadius = [];
     for (let i = 0; i < myChart.data.datasets[0].data.length; i++) {
-      if (myChart.data.datasets[0].data[i] == data[state]["energy"]) {
+      if (myChart.data.datasets[0].data[i] === data[state]["energy"]) {
         myChart.data.datasets[0].pointRadius[i] = 5;
         myChart.data.datasets[0].pointBackgroundColor[i] = "red";
       } else {
@@ -149,7 +151,7 @@ let movie = new ChemDoodle.MovieCanvas3D("element", width, height);
 const setMolecule = (freq) => {
   movie.clear();
   movie.frames = [];
-  if (data != null) {
+  if (data !== null) {
     data[state]["geometries"][freq].forEach((geometry) =>
       movie.addFrame([ChemDoodle.readXYZ(geometry)], [])
     );
@@ -169,7 +171,7 @@ const renderButtons = () => {
     .map((freq) => `<div class="v-chip">${freq}</div>`)
     .join(" ");
 
-  let firstButton = document.querySelectorAll("#buttons .v-chip")[0];
+  const firstButton = document.querySelectorAll("#buttons .v-chip")[0];
   firstButton.classList.add("active");
   frequency = parseFloat(firstButton.innerHTML);
   setMolecule(frequency);
