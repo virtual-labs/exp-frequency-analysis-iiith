@@ -2,38 +2,72 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "How many imaginary frequencies will a second order saddle point have?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "None of the above"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "b": "A second order saddle point is defined as a maximum along two coordinates and minimum along all other coordinates. A maximum along two coordinates will have two two negative eigen values after double derivative of the energy. Both of this eigen values will produce two imaginary frequencies."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following is true?",
+      "answers": {
+        "a": "Reactants and products are the only stationary points in SN2 reaction",
+        "b": "Transition state is not a stationary point",
+        "c": "Only the transition state is the stationary point",
+        "d": "All reactants, products and transition states are stationary points"
+      },
+      "explanations": {
+        "d": "All states which produce 0 eigen values in their first derivative of energy are known as stationary points."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The normal mode corresponding to the imaginary frequency in the transition state usually reflects the change in geometry in going from reactants to products.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "The only imaginary frequency in the transition state will reflect the coordinate connecting the reactant and product. Any other imaginary frequency may correspond to transition state of a different reaction."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following statement(s) are correct about the transition state?<br><ol type='1'><li>It is the maximum energy structure along the reaction coordinate.</li><li>It is the minimum energy structure along the reaction coordinate.</li><li>It is the maximum energy structure along any direction that is perpendicular to reaction coordinate and passes through the transition state.</li><li>It is the minimum energy structure along any direction that is perpendicular to reaction coordinate and passes through the transition state.</li></ol>",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "1 and 3",
+        "b": "2 and 3",
+        "c": "1 and 4",
+        "d": "2 and 4"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "A transition state is the highest energy structure along the reaction coordinate and along all directions it is lowest in energy."
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "advanced"
+    },
+    {
+      "question": "A linear activated complex having N atoms at the transition state has how many vibrational degrees of freedom?",
+      "answers": {
+        "a": "3N-5",
+        "b": "3N-6",
+        "c": "3N-7",
+        "d": "3N-4"
+      },
+      "explanations": {
+        "b": "Linear molecules have 3N-5 degrees of freedom, but at the transition state it will have one less degree of freedom, hence 3N-6."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     }
   ]
 }
