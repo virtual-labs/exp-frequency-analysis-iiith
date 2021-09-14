@@ -11,24 +11,9 @@
   </head>
   <body>
     <!-- Your code goes here-->
-    <div class="v-details-container v-margin-bottom">
+    <div class="v-details-container v-margin-bottom v-floating-details">
       <div class="v-detail-title">Instructions</div>
-      <div class="v-detail-row left-on-mobile">
-        Select a state from the graph.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Then, choose any frequency of molecule in that state from the table.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Now observe the molecule's movement having the selected frequency.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Repeat the same process for every state and frequency.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Note that the bond between atoms exists at some places, but is not being
-        displayed due to limitations of the simulator.
-      </div>
+      <div class="v-detail-row left-on-mobile" id="instructions"></div>
     </div>
     <div class="columns">
       <div class="column center-content v-flex-column">
@@ -39,7 +24,7 @@
         ></canvas>
       </div>
       <div class="column center-content v-vertical">
-        <div class="v-details-container">
+        <div class="v-details-container" id="frequency-container">
           <div class="v-detail-title">Choose a frequency</div>
           <div id="buttons"></div>
         </div>
