@@ -544,4 +544,28 @@ const data = {
   },
 };
 
+export const instructions = [
+  {
+    message: "Select a state from the graph by clicking on any coordinate",
+    elementId: ["myChart"],
+  },
+  {
+    message: "Choose any frequency of molecule in that state from the table",
+    elementId: ["frequency-container"],
+  },
+  {
+    message: "Observe the molecule's movement for the selected frequency",
+    elementId: ["element"],
+  },
+  {
+    message: "Repeat the same process for every state and frequency",
+    elementId: ["frequency-container", "myChart"],
+  },
+  {
+    message:
+      "Note that the bond between atoms exists at some places, but is not being displayed due to limitations of the simulator",
+    elementId: ["element"],
+  },
+];
+
 export default data;

@@ -1,6 +1,37 @@
 "use strict";
 
-import data from "./data.js";
+import data, { instructions } from "./data.js";
+
+let currentInstructionIndex = -1;
+let sleepTime = 3500;
+
+const setInstruction = (index) => {
+  if (index < instructions.length && currentInstructionIndex < index) {
+    currentInstructionIndex = index;
+    document.getElementById("instructions").innerHTML =
+      instructions[currentInstructionIndex].message;
+
+    instructions[currentInstructionIndex].elementId.forEach((id, ind) => {
+      if (ind === 0)
+        document.getElementById(id).scrollIntoView({
+          behavior: "smooth",
+        });
+      document.getElementById(id).classList.add("highlight");
+    });
+    sleep(sleepTime - 600).then(() =>
+      instructions[currentInstructionIndex].elementId.forEach((id) =>
+        document.getElementById(id).classList.remove("highlight")
+      )
+    );
+  }
+};
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const setMultipleInstructions = (indexes) =>
+  indexes.forEach((val, ind) =>
+    sleep(sleepTime * ind).then(() => setInstruction(val))
+  );
 
 const truncateFloat = (num) => Math.round(num * 1000000) / 1000000;
 
@@ -111,6 +142,7 @@ const initChart = () => {
           true
         );
         if (points.length) {
+          setInstruction(1);
           const firstPoint = points[0];
           const tmpState = myChart.data.labels[firstPoint._index];
           if (tmpState !== state) {
@@ -141,7 +173,7 @@ const highlightChart = () => {
 };
 
 let width = 600,
-  height = 400;
+  height = 300;
 if (window.innerWidth < 900) {
   width = window.innerWidth;
   height = 300;
@@ -178,6 +210,7 @@ const renderButtons = () => {
 
   document.querySelectorAll("#buttons .v-chip").forEach((button, ind) => {
     button.addEventListener("click", () => {
+      setMultipleInstructions([2, 3, 4]);
       document
         .querySelectorAll("#buttons .v-chip.active")
         .forEach((activeButton) => activeButton.classList.remove("active"));
@@ -195,3 +228,4 @@ const triggerUpdate = () => {
 
 initChart();
 triggerUpdate();
+setInstruction(0);
