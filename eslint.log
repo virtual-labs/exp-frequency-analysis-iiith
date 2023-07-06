@@ -1,0 +1,10 @@
+
+/home/runner/work/exp-frequency-analysis-iiith/exp-frequency-analysis-iiith/experiment/simulation/js/main.js
+   43:38  warning  'ind' is defined but never used  no-unused-vars
+   99:17  warning  'Chart' is not defined           no-undef
+  181:17  warning  'ChemDoodle' is not defined      no-undef
+  188:23  warning  'ChemDoodle' is not defined      no-undef
+  211:66  warning  'ind' is defined but never used  no-unused-vars
+
+✖ 5 problems (0 errors, 5 warnings)
+

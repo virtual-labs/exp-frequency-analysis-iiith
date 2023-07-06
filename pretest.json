@@ -1,0 +1,61 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "How can you characterise a transition state from its frequency calculation?",
+      "answers": {
+        "a": "It will have multiple negative frequency",
+        "b": "It will have one negative frequency",
+        "c": "It will one less mode of vibration",
+        "d": "It will one more mode of vibration"
+      },
+      "explanations": {
+        "b": "A transition state will have one negative frequency due to negative force constant obtained from double derivative of its energy."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Taking the example of SN2 reaction, which of the following is true?",
+      "answers": {
+        "a": "The reactant has higher number of vibrational modes than transition state",
+        "b": "The transition state has higher number of vibrational modes than both products and reactants",
+        "c": "The transition state is more stable than both reactants and products",
+        "d": "SN2 reaction is always exothermic"
+      },
+      "explanations": {
+        "b": "The transition state has higher number of atoms than both reactant and product and hence will have higher vibrational modes."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following statements regarding the use of catalysts is false?",
+      "answers": {
+        "a": "Catalysts lower the energy of the transition state",
+        "b": "Catalysts increase the proportion of molecules that possess sufficient energy to clear the activation energy barrier",
+        "c": "Catalysts increase the number of reactions that can happen spontaneous",
+        "d": "Catalysts provide an alternative reaction pathway from reactant to product"
+      },
+      "explanations": {
+        "a": "Catalyst decrease the activation energy of the reaction, i.e lower the energy of the transition state, as its energy is the activation energy of the reaction."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How many vibrational degrees of freedom will NH<sub>3</sub> have at its second order saddle point?",
+      "answers": {
+        "a": "6",
+        "b": "5",
+        "c": "4",
+        "d": "7"
+      },
+      "explanations": {
+        "c": "Saddles points have lesser degrees of freedom than minimum energy structures, a second order saddle point will have two lesser vibrational degrees of freedom. For NH<sub>3</sub>, this stands as 3N-8 i.e. 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    }
+  ]
+}
